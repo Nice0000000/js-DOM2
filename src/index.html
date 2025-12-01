@@ -3,23 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
     <link rel="stylesheet" href="styles.css">
-    <title>Галерея фотографій</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>FOTO IMAGE LIST</h1>
-    </header>
-    <main>
-        <div id="gallery" class="gallery"></div>
-        <div class="buttons">
-            <button id="loadMore">Завантажити ще 4 картинки</button>
-            <button id="clearGallery">Очистити галерею</button>
-            <button id="removeLast">Видалити останню картинку</button>
-            <button id="reverseGallery">Перевернути галерею</button>
-            <button id="shuffleGallery">Перемішати галерею</button>
+
+    <div class="main-wrapper">
+        <header class="header">
+            <h1></h1>
+            <p></p>
+        </header>
+
+        <main id="gallery" class="gallery-container"></main>
+        
+        <div id="loader" class="loader hidden">
+            <span></span><span></span><span></span>
         </div>
-    </main>
+
+        <div class="spacer"></div>
+    </div>
+
+    <nav class="floating-controls">
+        <button id="btn-load" class="ctrl-btn" title="Додати ще">
+            <span class="icon">＋</span> <span class="text">Load</span>
+        </button>
+        <button id="btn-reverse" class="ctrl-btn" title="Перевернути">
+            <span class="icon">⇄</span> <span class="text">Flip</span>
+        </button>
+        <button id="btn-remove" class="ctrl-btn warning" title="Видалити останню">
+            <span class="icon">−</span> <span class="text">Del</span>
+        </button>
+        <button id="btn-clear" class="ctrl-btn danger" title="Очистити все">
+            <span class="icon">×</span> <span class="text">Clear</span>
+        </button>
+    </nav>
+
     <script src="script.js"></script>
 </body>
 </html>
